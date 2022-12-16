@@ -25,7 +25,7 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body class="container">
+  <body class="container" onload="uhr()">
     <header class="row">
       <div class="col-1">
         <div class="row">
@@ -86,12 +86,14 @@
         </div>
       </div>
       <span class="col-3"> Fantasy Languitch </span>
-      <span id="stunden" class="col-3" onload="uhr()">h</span>
-      <span id="minuten" class="col-3" onload="uhr()">m</span>
+      <div id="uhr" onclick="">
+        <span id="stunden" class="col-1">h</span>
+        <span id="trenner" class="col-1">:</span>
+        <span id="minuten" class="col-1">m</span>
+      </div>
     </header>
 
-    <section>
-    </section>
+    <section></section>
     <footer></footer>
   </body>
 </html>
