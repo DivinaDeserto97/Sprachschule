@@ -1,4 +1,7 @@
 /* globale varabeln */
+let count;
+let intervalUhr;
+let intervalId;
 
 /* funktionen für alle */
 
@@ -13,6 +16,15 @@ function dark() {
     for (let b = 0; b < buttons.length; b++) {
         buttons[b].classList.toggle("btn-dark");
     }
+}
+function updateUhr() {
+    let uhrStunden = getHours();
+    let uhrMinuten = getMinutes();
+    document.getElementById('stunden').innerText = uhrStunden;
+    document.getElementById('minuten').innerText = uhrMinuten;
+}
+function uhr(){
+    intervalUhr = setInterval(updateUhr(), 1000);
 }
 
 
