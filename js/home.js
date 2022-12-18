@@ -1,5 +1,4 @@
 /* globale varabeln */
-let count;
 let intervalUhr;
 let intervalId;
 let d = new Date();
@@ -21,14 +20,20 @@ function dark() {
 function updateUhr() {
   let uhrStunden = d.getHours();
   let uhrMinuten = d.getMinutes();
-  document.getElementById("stunden").innerText = uhrStunden;
-  document.getElementById("minuten").innerText = uhrMinuten;
+  document.getElementById("stundenUhr").innerText = uhrStunden;
+  document.getElementById("minutenUhr").innerText = uhrMinuten;
 }
 function uhr() {
   intervalUhr = setInterval(updateUhr(), 1000);
 }
-function uhrToCount(){
+function updateStopuhr(){
+    let count = 0;
+    const second = 1000;
+    const minit = second * 60;
+    const hours = minit * 60;
     
+    document.getElementById('hours').innerText
+
 }
 
 /* funktionen für home page */
