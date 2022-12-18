@@ -3,6 +3,7 @@ let intervalUhr;
 let intervalId;
 let d = new Date();
 
+
 /* funktionen für alle */
 
 function workInProgress() {
@@ -25,15 +26,6 @@ function updateUhr() {
 }
 function uhr() {
   intervalUhr = setInterval(updateUhr(), 1000);
-}
-function updateStopuhr(){
-    let count = 0;
-    const second = 1000;
-    const minit = second * 60;
-    const hours = minit * 60;
-    
-    document.getElementById('hours').innerText
-
 }
 
 /* funktionen für home page */
