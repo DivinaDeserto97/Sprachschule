@@ -17,7 +17,7 @@
     />
 
     <!-- js -->
-    <script src="/js/home.js"></script>
+    
     <!-- Bootstrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
@@ -25,98 +25,88 @@
       crossorigin="anonymous"
     ></script>
   </head>
+  <header class="row">
   <body class="container" onload="uhr()">
-    <header class="row">
-      <div class="col-1">
-        <div class="row">
+    <div class="col-1">
+      <div class="row">
+        <button
+          type="button"
+          class="col-6 btn btn-light d-flex"
+          onclick="dark()"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-lightbulb-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5z"
+            />
+          </svg>
+        </button>
+        <span class="col-6 dropdown">
           <button
+            class="d-flex btn btn-light dropdown"
             type="button"
-            class="col-6 btn btn-light d-flex"
-            onclick="dark()"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="16"
               height="16"
               fill="currentColor"
-              class="bi bi-lightbulb-fill"
+              class="bi bi-list"
               viewBox="0 0 16 16"
             >
               <path
-                d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5z"
+                fill-rule="evenodd"
+                d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
               />
             </svg>
           </button>
-          <span class="col-6 dropdown">
-            <button
-              class="d-flex btn btn-light dropdown"
-              type="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="16"
-                height="16"
-                fill="currentColor"
-                class="bi bi-list"
-                viewBox="0 0 16 16"
-              >
-                <path
-                  fill-rule="evenodd"
-                  d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
-                />
-              </svg>
-            </button>
-            <ul class="dropdown-menu">
-              <li onclick="workInProgress()">
-                <a class="dropdown-item" href="home.html">Home</a>
-              </li>
-              <li onclick="workInProgress()">
-                <a class="dropdown-item" href="#">about us</a>
-              </li>
-              <li onclick="workInProgress()">
-                <a class="dropdown-item" href="#">contact</a>
-              </li>
-              <li onclick="workInProgress()">
-                <a class="dropdown-item" href="#">News</a>
-              </li>
-            </ul>
-          </span>
-        </div>
+          <ul class="dropdown-menu">
+            <li onclick="workInProgress()">
+              <a class="dropdown-item" href="home.html">Home</a>
+            </li>
+            <li onclick="workInProgress()">
+              <a class="dropdown-item" href="#">about us</a>
+            </li>
+            <li onclick="workInProgress()">
+              <a class="dropdown-item" href="#">contact</a>
+            </li>
+            <li onclick="workInProgress()">
+              <a class="dropdown-item" href="#">News</a>
+            </li>
+          </ul>
+        </span>
       </div>
-      <span class="col-3"> Fantasy Languitch </span>
-      <div id="uhr" onclick="">
-        <span id="stundenUhr" class="col-1">h</span>
-        <span id="trennerUhr" class="col-1">:</span>
-        <span id="minutenUhr" class="col-1">m</span>
-      </div>
-      <div>
-        <span id="stundenStopuhr">h</span>
-        <span id="trennerStopuhr1">:</span>
-        <span id="minutenStopuhr">m</span>
-        <span id="trennerStopuhr2">:</span>
-        <span id="secundenStopuhr">s</span>
-      </div>
-      <div>
-        <input type="search" value="search" /><button>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="16"
-            height="16"
-            fill="currentColor"
-            class="bi bi-search"
-            viewBox="0 0 16 16"
-          >
-            <path
-              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
-            />
-          </svg>
-        </button>
-      </div>
+    </div>
+    <span class="col-3"> Fantasy Languitch </span>
+    <div id="uhr" onclick="">
+      <span id="stundenUhr" class="col-1">h</span>
+      <span id="trennerUhr" class="col-1">:</span>
+      <span id="minutenUhr" class="col-1">m</span>
+    </div>
+    <div>
+      <span id="stundenStopuhr">h</span>
+      <span id="trennerStopuhr1">:</span>
+      <span id="minutenStopuhr">m</span>
+      <span id="trennerStopuhr2">:</span>
+      <span id="secundenStopuhr">s</span>
+    </div>
+    <div>
+      <input type="search" />
+      <button type="button" class="btn btn-light" onclick="workInProgress()"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+      </svg></button>
+    </div>
     </header>
     <section>
-      <form id="formular" name="formular" method="post">
+      <form id="formular" name="formular" method="post" onsubmit="return validateAnswers();">
         <h6 class="" id="titelKontakt">Kontakt angaben</h6>
         <label class="" name="anrede" id="titelAnrede">Anrede</label><br />
         <input
@@ -150,7 +140,7 @@
           type="text"
           class=""
           name="vorname"
-          id="nachname"
+          id="vorname"
           value="Vorname "
         /><label class="" name="vorname" id="vornameAbstand"
           >&nbsp;&nbsp;&nbsp;</label
@@ -205,7 +195,7 @@
         ><label class="" name="plz" id="plzFehlemeldung">Fehlemeldung</label
         ><br />
         <label class="" name="ort" id="titelOrt">Ort</label><br />
-        <input type="text" class="" name="ort" id="ort" value=" " /><label
+        <input type="text" class="" name="ort" id="ort" value="" /><label
           class=""
           name="ort"
           id="ortAbstand"
@@ -221,7 +211,7 @@
         ><label class="" name="eMail" id="eMailFehlemeldung">Fehlemeldung</label
         ><br />
         <label class="" name="telM" id="titelTelM">Tel. M.:</label><br />
-        <input type="tel" class="" name="telM" id="telM" value="+41" /><label
+        <input type="tel" class="" name="telM" id="telM" value="" /><label
           class=""
           name="telM"
           id="telMAbstand"
@@ -229,7 +219,7 @@
         ><label class="" name="telM" id="telMFehlemeldung">Fehlemeldung</label
         ><br />
         <label class="" name="telP" id="titelTelP">Tel. P.:</label><br />
-        <input type="tel" class="" name="telP" id="telP" value="+41" /><label
+        <input type="tel" class="" name="telP" id="telP" value="" /><label
           class=""
           name="telP"
           id="telPAbstand"
@@ -249,7 +239,7 @@
           type="radio"
           class=""
           name="kursort"
-          id="ParisKursort"
+          id="parisKursort"
           value="Paris"
         /><label>Paris</label>
         <input
@@ -258,44 +248,185 @@
           name="kursort"
           id="newYorkKursort"
           value="New York"
-        /><label>New York</label
+        /><label class="" name="kursort" id="kursortNewYork">New York</label
         ><label class="" name="kursort" id="kursortAbstand"
           >&nbsp;&nbsp;&nbsp;</label
         ><label class="" name="kursort" id="kursortFehlemeldung"
           >Fehlemeldung</label
         ><br />
-        <label>Kurssprache</label><br />
-        <input type="checkbox" name="kursort" /><label>Gemeinesprache</label>
-        <input type="checkbox" name="kursort" /><label>Mensch</label>
-        <input type="checkbox" name="kursort" /><label>Halbling</label><br />
-        <input type="checkbox" name="kursort" /><label>Zwergisch</label>
-        <input type="checkbox" name="kursort" /><label>Riesisch</label>
-        <input type="checkbox" name="kursort" /><label>Gnomisch</label>
-        <input type="checkbox" name="kursort" /><label>Goblinisch</label>
-        <input type="checkbox" name="kursort" /><label>Orks</label><br />
-        <input type="checkbox" name="kursort" /><label>Elfisch</label>
-        <input type="checkbox" name="kursort" /><label>Sylvanisch</label>
-        <input type="checkbox" name="kursort" /><label
+        <label class="" name="kurssprache" id="titelKurssprache"
+          >Kurssprache</label
+        ><br />
+        <input
+          type="checkbox"
+          class=""
+          name="kurssprache"
+          id="gemeinespracheKurssprache"
+          value="Gemeinesprache"
+        /><label class="" name="kurssprache" id="gemeinespracheKurssprache"
+          >Gemeinesprache</label
+        >
+        <input
+          type="checkbox"
+          class=""
+          name="kurssprache"
+          id="menschKurssprache"
+          value="Mensch"
+        /><label class="" name="kurssprache" id="menschKurssprache"
+          >Mensch</label
+        >
+        <input
+          type="checkbox"
+          class=""
+          name="kurssprache"
+          id="menschKurssprache"
+          value="Halbling"
+        /><label class="" name="kurssprache" id="halblingKurssprache"
+          >Halbling</label
+        ><br />
+        <input
+          type="checkbox"
+          class=""
+          name="kurssprache"
+          id="zwergischKurssprache"
+          value="Zwergisch"
+        /><label class="" name="kurssprache" id="zwergischKurssprache"
+          >Zwergisch</label
+        >
+        <input
+          type="checkbox"
+          class=""
+          name="kurssprache"
+          id="riesischKurssprache"
+          value="Riesisch"
+        /><label class="" name="kurssprache" id="riesischKurssprache"
+          >Riesisch</label
+        >
+        <input
+          type="checkbox"
+          class=""
+          name="kurssprache"
+          id="gnomischKurssprache"
+          value="Riesisch"
+        /><label class="" name="kurssprache" id="gnomischKurssprache"
+          >Gnomisch</label
+        >
+        <input
+          type="checkbox"
+          class=""
+          name="kurssprache"
+          id="goblinischKurssprache"
+          value="Goblinisch"
+        /><label class="" name="kurssprache" id="goblinischKurssprache"
+          >Goblinisch</label
+        >
+        <input
+          type="checkbox"
+          class=""
+          name="kurssprache"
+          id="orksKurssprache"
+          value="Orks"
+        /><label class="" name="kurssprache" id="orksKurssprache">Orks</label
+        ><br />
+        <input
+          type="checkbox"
+          class=""
+          name="kurssprache"
+          id="elfischKurssprache"
+          value="Elfisch"
+        /><label class="" name="kurssprache" id="elfischKurssprache"
+          >Elfisch</label
+        >
+        <input
+          type="checkbox"
+          class=""
+          name="kurssprache"
+          id="sylvanischKurssprache"
+          value="sylvanisch"
+        /><label class="" name="kurssprache" id="sylvanischKurssprache"
+          >Sylvanisch</label
+        >
+        <input
+          type="checkbox"
+          class=""
+          name="kurssprache"
+          id="gemeinespracheDerUnterreicheKurssprache"
+          value="Gemeinesprache der unterreiche"
+        /><label
+          class=""
+          name="kurssprache"
+          id="gemeinespracheDerUnterreicheKurssprache"
           >Gemeinesprache der unterreiche</label
         >
-        <label>&nbsp;&nbsp;&nbsp;</label><label>Fehlemeldung</label><br />
-        <label>Übersetzt in</label><br />
-        <input type="radio" name="uebersetzt" /><label>Zürich</label>
-        <input type="radio" name="uebersetzt" /><label>Paris</label>
-        <input type="radio" name="uebersetzt" /><label>New York</label
-        ><label>&nbsp;&nbsp;&nbsp;</label><label>Fehlemeldung</label><br />
-        <h6>Rechtliches</h6>
-        <input type="checkbox" /><label
-          >Ich habe di agbs Gelesen und akzeptiert</label
-        ><label>&nbsp;&nbsp;&nbsp;</label><label>Fehlemeldung</label><br />
-        <label>Annullierungsversicherung</label><br />
-        <input type="radio" name="versicherung" /><label>Ja</label>
-        <input type="radio" name="versicherung" /><label>Nein</label
-        ><label>&nbsp;&nbsp;&nbsp;</label><label>Fehlemeldung</label
+        <label class="" name="kurssprache" id="kursspracheAbstand"
+          >&nbsp;&nbsp;&nbsp;</label
+        ><label class="" name="kurssprache" id="kursspracheFehlemeldung"
+          >Fehlemeldung</label
+        ><br />
+        <label class="" name="uebersetzt" id="titelUebersetzt"
+          >Übersetzt in</label
+        ><br />
+        <input
+          type="radio"
+          class=""
+          name="uebersetzt"
+          id=""
+          value="Deutsch"
+        /><label class="" name="uebersetztDeutsch" id="Deutsch">Deutsch</label>
+        <input
+          type="radio"
+          class=""
+          name="uebersetzt"
+          id="uebersetztFranzösich"
+          value="Französich"
+        /><label class="" name="uebersetzt" id="Französich">Französich</label
+        ><input
+          type="radio"
+          class=""
+          name="uebersetzt"
+          id="uebersetztEnglisch"
+          value="Englisch"
+        /><label class="" name="uebersetzt" id="uebersetztEnglisch"
+          >Englisch</label
+        >
+        <label class="" name="uebersetzt" id="uebersetztAbstand"
+          >&nbsp;&nbsp;&nbsp;</label
+        ><label class="" name="uebersetzt" id="uebersetztFehlemeldung"
+          >Fehlemeldung</label
         ><br /><br />
-        <input type="submit" />
+        <h6 class="" id="titelRechtliches">Rechtliches</h6>
+        <input type="checkbox" class="" name="agb" id="agb" value="agb" /><label
+          >Ich habe die agbs Gelesen und akzeptiert</label
+        ><label class="" name="agb" id="agbAbstand">&nbsp;&nbsp;&nbsp;</label
+        ><label class="" name="agb" id="agbFehlemeldung">Fehlemeldung</label
+        ><br />
+        <label class="" name="versicherung" id="titelAnnullierungsversicherung">Annullierungsversicherung</label><br />
+        <input type="radio"
+        class=""
+        name="versicherung"
+        id="jaVersicherung"
+        value="Ja"/><label class="" name="versicherung" id="versicherungJa">Ja</label>
+        <input type="radio"
+        class=""
+        name="versicherung"
+        id="neinVersicherung"
+        value="Nein" /><label class="" name="versicherung" id="versicherungNein">Nein</label
+        ><label class=""
+        name="versicherung"
+        id="versicherungAbstand">&nbsp;&nbsp;&nbsp;</label>
+        <label class=""
+        name="versicherung"
+        id="versicherungFehlemeldung">Fehlemeldung</label
+        ><br /><br />
+        <input type="submit"
+        class=""
+        name="submit"
+        id="submit"
+        value="submit" />
       </form>
+      <button type="button" class="btn btn-light" onclick="validateKursort()">Test</button>
     </section>
     <footer></footer>
   </body>
+  <script src="/js/home.js"></script>
 </html>
