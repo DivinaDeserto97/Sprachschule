@@ -98,50 +98,173 @@
         <span id="trennerStopuhr2">:</span>
         <span id="secundenStopuhr">s</span>
       </div>
-      <div><input type="search" /></div>
+      <div>
+        <input type="search" value="search" /><button>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-search"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+            />
+          </svg>
+        </button>
+      </div>
     </header>
     <section>
-      <form>
-        <h6>Kontakt angaben</h6>
-        <label>Anrede</label><br />
-        <input type="radio" name="anrede" /><label>Herr</label>
-        <input type="radio" name="anrede" /><label>Frau</label>
-        <input type="radio" name="anrede" /><label>Andere</label
-        ><label>&nbsp;&nbsp;&nbsp;</label><label>Fehlemeldung</label><br />
-        <label>Vorname</label><br />
-        <input type="text"/><label>&nbsp;&nbsp;&nbsp;</label
-        ><label>Fehlemeldung</label><br />
-        <label>Nachname</label><br />
-        <input type="text"/><label>&nbsp;&nbsp;&nbsp;</label
-        ><label>Fehlemeldung</label><br />
-        <label>Geburtsdatum</label><br />
-        <input type="datetime-local" /><label>&nbsp;&nbsp;&nbsp;</label
-        ><label>Fehlemeldung</label><br />
-        <label>Strasse</label><br />
-        <input type="text"/><label>&nbsp;&nbsp;&nbsp;</label
-        ><label>Fehlemeldung</label><br />
-        <label>PZL</label><br />
-        <input type="number"/><label>&nbsp;&nbsp;&nbsp;</label
-        ><label>Fehlemeldung</label><br />
-        <label>Ort</label><br />
-        <input type="text"/><label>&nbsp;&nbsp;&nbsp;</label
-        ><label>Fehlemeldung</label><br />
-        <label>E-Mail</label><br />
-        <input type="email"/><label>&nbsp;&nbsp;&nbsp;</label
-        ><label>Fehlemeldung</label><br />
-        <label>Tel. M.:</label><br />
-        <input type="tel"/><label>&nbsp;&nbsp;&nbsp;</label
-        ><label>Fehlemeldung</label><br />
-        <label>Tel. P.:</label><br />
-        <input type="tel"/><label>&nbsp;&nbsp;&nbsp;</label
-        ><label>Fehlemeldung</label><br /><br />
-        <h6>Kurs</h6>
-        <label>Kursort</label><br />
-        <input type="radio" name="kursort" /><label>Zürich</label>
-        <input type="radio" name="kursort" /><label>Paris</label>
-        <input type="radio" name="kursort" /><label>New York</label
-        ><label>&nbsp;&nbsp;&nbsp;</label><label>Fehlemeldung</label><br />
-        <label>Kursort</label><br />
+      <form id="formular" name="formular" method="post">
+        <h6 class="" id="titelKontakt">Kontakt angaben</h6>
+        <label class="" name="anrede" id="titelAnrede">Anrede</label><br />
+        <input
+          type="radio"
+          class=""
+          name="anrede"
+          id="herrAnrede"
+          value="Herr"
+        /><label class="" name="anrede" id="anredeHerr">Herr</label>
+        <input
+          type="radio"
+          class=""
+          name="anrede"
+          id="frauAnrede"
+          value="Frau"
+        /><label class="" name="anrede" id="anredeFrau">Frau</label>
+        <input
+          type="radio"
+          class=""
+          name="anrede"
+          id="andereAnrede"
+          value="Andere"
+        /><label class="" name="anrede" id="anredeAndere">Andere</label
+        ><label class="" name="anrede" id="anredeAbstand"
+          >&nbsp;&nbsp;&nbsp;</label
+        ><label class="" name="anrede" id="anredeFehlemeldung"
+          >Fehlemeldung</label
+        ><br />
+        <label class="" name="vorname" id="titelVorname">Vorname</label><br />
+        <input
+          type="text"
+          class=""
+          name="vorname"
+          id="nachname"
+          value="Vorname "
+        /><label class="" name="vorname" id="vornameAbstand"
+          >&nbsp;&nbsp;&nbsp;</label
+        ><label class="" name="vorname" id="vornameFehlemeldung"
+          >Fehlemeldung</label
+        ><br />
+        <label class="" name="nachname" id="titelNachname">Nachname</label
+        ><br />
+        <input
+          type="text"
+          class=""
+          name="nachname"
+          id="nachname"
+          value="Nachname "
+        /><label class="" name="nachname" id="nachnameAbstand"
+          >&nbsp;&nbsp;&nbsp;</label
+        ><label class="" name="nachname" id="nachnameFehlemeldung"
+          >Fehlemeldung</label
+        ><br />
+        <label class="" name="geburtsdatum" id="titelGeburtsdatum"
+          >Geburtsdatum</label
+        ><br />
+        <input
+          type="datetime-local"
+          class=""
+          name="geburtsdatum"
+          id="geburtsdatum"
+          value=" "
+        /><label class="" name="geburtsdatum" id="geburtsdatumAbstand"
+          >&nbsp;&nbsp;&nbsp;</label
+        ><label class="" name="geburtsdatum" id="geburtsdatumFehlemeldung"
+          >Fehlemeldung</label
+        ><br />
+        <label class="" name="strasse" id="titelStrasse">Strasse</label><br />
+        <input
+          type="text"
+          class=""
+          name="strasse"
+          id="strasse"
+          value=""
+        /><label class="" name="strasse" id="strasseAbstand"
+          >&nbsp;&nbsp;&nbsp;</label
+        ><label class="" name="strasse" id="strasseFehlemeldung"
+          >Fehlemeldung</label
+        ><br />
+        <label class="" name="plz" id="titelPlz">PLZ</label><br />
+        <input type="number" class="" name="plz" id="plz" value="0000" /><label
+          class=""
+          name="plz"
+          id="plzAbstand"
+          >&nbsp;&nbsp;&nbsp;</label
+        ><label class="" name="plz" id="plzFehlemeldung">Fehlemeldung</label
+        ><br />
+        <label class="" name="ort" id="titelOrt">Ort</label><br />
+        <input type="text" class="" name="ort" id="ort" value=" " /><label
+          class=""
+          name="ort"
+          id="ortAbstand"
+          >&nbsp;&nbsp;&nbsp;</label
+        ><label class="" name="ort" id="ortFehlemeldung">Fehlemeldung</label
+        ><br />
+        <label class="" name="eMail" id="titelEMail">E-Mail</label><br />
+        <input type="email" class="" name="eMail" id="eMail" value="" /><label
+          class=""
+          name="eMail"
+          id="eMailAbstand"
+          >&nbsp;&nbsp;&nbsp;</label
+        ><label class="" name="eMail" id="eMailFehlemeldung">Fehlemeldung</label
+        ><br />
+        <label class="" name="telM" id="titelTelM">Tel. M.:</label><br />
+        <input type="tel" class="" name="telM" id="telM" value="+41" /><label
+          class=""
+          name="telM"
+          id="telMAbstand"
+          >&nbsp;&nbsp;&nbsp;</label
+        ><label class="" name="telM" id="telMFehlemeldung">Fehlemeldung</label
+        ><br />
+        <label class="" name="telP" id="titelTelP">Tel. P.:</label><br />
+        <input type="tel" class="" name="telP" id="telP" value="+41" /><label
+          class=""
+          name="telP"
+          id="telPAbstand"
+          >&nbsp;&nbsp;&nbsp;</label
+        ><label class="" name="telP" id="telPFehlemeldung">Fehlemeldung</label
+        ><br /><br />
+        <h6 id="titelKurs">Kurs</h6>
+        <label class="" name="kursort" id="titelKursort">Kursort</label><br />
+        <input
+          type="radio"
+          class=""
+          name="kursort"
+          id="zürichKursort"
+          value="Zürich"
+        /><label class="" name="kursort" id="kursortZürich">Zürich</label>
+        <input
+          type="radio"
+          class=""
+          name="kursort"
+          id="ParisKursort"
+          value="Paris"
+        /><label>Paris</label>
+        <input
+          type="radio"
+          class=""
+          name="kursort"
+          id="newYorkKursort"
+          value="New York"
+        /><label>New York</label
+        ><label class="" name="kursort" id="kursortAbstand"
+          >&nbsp;&nbsp;&nbsp;</label
+        ><label class="" name="kursort" id="kursortFehlemeldung"
+          >Fehlemeldung</label
+        ><br />
+        <label>Kurssprache</label><br />
         <input type="checkbox" name="kursort" /><label>Gemeinesprache</label>
         <input type="checkbox" name="kursort" /><label>Mensch</label>
         <input type="checkbox" name="kursort" /><label>Halbling</label><br />
@@ -152,15 +275,24 @@
         <input type="checkbox" name="kursort" /><label>Orks</label><br />
         <input type="checkbox" name="kursort" /><label>Elfisch</label>
         <input type="checkbox" name="kursort" /><label>Sylvanisch</label>
-        <input type="checkbox" name="kursort" /><label>Gemeinesprache der unterreiche</label>
+        <input type="checkbox" name="kursort" /><label
+          >Gemeinesprache der unterreiche</label
+        >
         <label>&nbsp;&nbsp;&nbsp;</label><label>Fehlemeldung</label><br />
+        <label>Übersetzt in</label><br />
+        <input type="radio" name="uebersetzt" /><label>Zürich</label>
+        <input type="radio" name="uebersetzt" /><label>Paris</label>
+        <input type="radio" name="uebersetzt" /><label>New York</label
+        ><label>&nbsp;&nbsp;&nbsp;</label><label>Fehlemeldung</label><br />
         <h6>Rechtliches</h6>
-        <input type="checkbox"/><label>Ich habe di agbs Gelesen und akzeptiert</label><label>&nbsp;&nbsp;&nbsp;</label
-        ><label>Fehlemeldung</label><br />
+        <input type="checkbox" /><label
+          >Ich habe di agbs Gelesen und akzeptiert</label
+        ><label>&nbsp;&nbsp;&nbsp;</label><label>Fehlemeldung</label><br />
         <label>Annullierungsversicherung</label><br />
         <input type="radio" name="versicherung" /><label>Ja</label>
         <input type="radio" name="versicherung" /><label>Nein</label
-        ><label>&nbsp;&nbsp;&nbsp;</label><label>Fehlemeldung</label><br /><br />
+        ><label>&nbsp;&nbsp;&nbsp;</label><label>Fehlemeldung</label
+        ><br /><br />
         <input type="submit" />
       </form>
     </section>

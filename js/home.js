@@ -31,5 +31,13 @@ function uhr() {
 /* funktionen für home page */
 
 /* funktionen für Formular page */
+/* let sunderzeichen = ['.','@','0','1','2','3','4','5','6','7','8','9','!','?'];
+function pruefen(){
+  if ()return false;
+  return true;
+}
+function pruefenAnrede(){
+  
+} */
 
 /* funktionen für Rüchkgabe page */
