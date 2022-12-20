@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>home</title>
+    <title>Formular</title>
 
     <!-- css -->
     <link href="/css/home.css" rel="stylesheet" />
@@ -86,17 +86,10 @@
       </div>
     </div>
     <span class="col-3"> Fantasy Languitch </span>
-    <div id="uhr" onclick="">
+    <div id="uhr">
       <span id="stundenUhr" class="col-1">h</span>
       <span id="trennerUhr" class="col-1">:</span>
       <span id="minutenUhr" class="col-1">m</span>
-    </div>
-    <div>
-      <span id="stundenStopuhr">h</span>
-      <span id="trennerStopuhr1">:</span>
-      <span id="minutenStopuhr">m</span>
-      <span id="trennerStopuhr2">:</span>
-      <span id="secundenStopuhr">s</span>
     </div>
     <div>
       <input type="search" />
@@ -106,7 +99,7 @@
     </div>
     </header>
     <section>
-      <form id="formular" name="formular" method="post" onsubmit="return validateAnswers();">
+      <form id="formular" name="formular" method="post" onsubmit="return validate();">
         <h6 class="" id="titelKontakt">Kontakt angaben</h6>
         <label class="" name="anrede" id="titelAnrede">Anrede</label><br />
         <input
@@ -133,7 +126,7 @@
         ><label class="" name="anrede" id="anredeAbstand"
           >&nbsp;&nbsp;&nbsp;</label
         ><label class="" name="anrede" id="anredeFehlemeldung"
-          >Fehlemeldung</label
+          ><a href="#anredeFehlemeldung">&nbsp</a></label
         ><br />
         <label class="" name="vorname" id="titelVorname">Vorname</label><br />
         <input
@@ -141,11 +134,11 @@
           class=""
           name="vorname"
           id="vorname"
-          value="Vorname "
+          value=""
         /><label class="" name="vorname" id="vornameAbstand"
           >&nbsp;&nbsp;&nbsp;</label
         ><label class="" name="vorname" id="vornameFehlemeldung"
-          >Fehlemeldung</label
+          ><a href="#vornameFehlemeldung">&nbsp</a></label
         ><br />
         <label class="" name="nachname" id="titelNachname">Nachname</label
         ><br />
@@ -154,25 +147,25 @@
           class=""
           name="nachname"
           id="nachname"
-          value="Nachname "
+          value=""
         /><label class="" name="nachname" id="nachnameAbstand"
           >&nbsp;&nbsp;&nbsp;</label
         ><label class="" name="nachname" id="nachnameFehlemeldung"
-          >Fehlemeldung</label
+          ><a href="#nachnameFehlemeldung">&nbsp</a></label
         ><br />
         <label class="" name="geburtsdatum" id="titelGeburtsdatum"
-          >Geburtsdatum</label
+          >Alter</label
         ><br />
         <input
-          type="datetime-local"
+          type="number"
           class=""
           name="geburtsdatum"
           id="geburtsdatum"
-          value=" "
+          value=""
         /><label class="" name="geburtsdatum" id="geburtsdatumAbstand"
           >&nbsp;&nbsp;&nbsp;</label
         ><label class="" name="geburtsdatum" id="geburtsdatumFehlemeldung"
-          >Fehlemeldung</label
+          ><a href="#geburtsdatumFehlemeldung">&nbsp</a></label
         ><br />
         <label class="" name="strasse" id="titelStrasse">Strasse</label><br />
         <input
@@ -184,7 +177,7 @@
         /><label class="" name="strasse" id="strasseAbstand"
           >&nbsp;&nbsp;&nbsp;</label
         ><label class="" name="strasse" id="strasseFehlemeldung"
-          >Fehlemeldung</label
+          >&nbsp</label
         ><br />
         <label class="" name="plz" id="titelPlz">PLZ</label><br />
         <input type="number" class="" name="plz" id="plz" value="0000" /><label
@@ -192,7 +185,7 @@
           name="plz"
           id="plzAbstand"
           >&nbsp;&nbsp;&nbsp;</label
-        ><label class="" name="plz" id="plzFehlemeldung">Fehlemeldung</label
+        ><label class="" name="plz" id="plzFehlemeldung">&nbsp</label
         ><br />
         <label class="" name="ort" id="titelOrt">Ort</label><br />
         <input type="text" class="" name="ort" id="ort" value="" /><label
@@ -200,7 +193,7 @@
           name="ort"
           id="ortAbstand"
           >&nbsp;&nbsp;&nbsp;</label
-        ><label class="" name="ort" id="ortFehlemeldung">Fehlemeldung</label
+        ><label class="" name="ort" id="ortFehlemeldung">&nbsp</label
         ><br />
         <label class="" name="eMail" id="titelEMail">E-Mail</label><br />
         <input type="email" class="" name="eMail" id="eMail" value="" /><label
@@ -208,7 +201,7 @@
           name="eMail"
           id="eMailAbstand"
           >&nbsp;&nbsp;&nbsp;</label
-        ><label class="" name="eMail" id="eMailFehlemeldung">Fehlemeldung</label
+        ><label class="" name="eMail" id="eMailFehlemeldung">&nbsp</label
         ><br />
         <label class="" name="telM" id="titelTelM">Tel. M.:</label><br />
         <input type="tel" class="" name="telM" id="telM" value="" /><label
@@ -216,7 +209,7 @@
           name="telM"
           id="telMAbstand"
           >&nbsp;&nbsp;&nbsp;</label
-        ><label class="" name="telM" id="telMFehlemeldung">Fehlemeldung</label
+        ><label class="" name="telM" id="telMFehlemeldung">&nbsp</label
         ><br />
         <label class="" name="telP" id="titelTelP">Tel. P.:</label><br />
         <input type="tel" class="" name="telP" id="telP" value="" /><label
@@ -224,7 +217,7 @@
           name="telP"
           id="telPAbstand"
           >&nbsp;&nbsp;&nbsp;</label
-        ><label class="" name="telP" id="telPFehlemeldung">Fehlemeldung</label
+        ><label class="" name="telP" id="telPFehlemeldung">&nbsp</label
         ><br /><br />
         <h6 id="titelKurs">Kurs</h6>
         <label class="" name="kursort" id="titelKursort">Kursort</label><br />
@@ -252,7 +245,7 @@
         ><label class="" name="kursort" id="kursortAbstand"
           >&nbsp;&nbsp;&nbsp;</label
         ><label class="" name="kursort" id="kursortFehlemeldung"
-          >Fehlemeldung</label
+          >&nbsp</label
         ><br />
         <label class="" name="kurssprache" id="titelKurssprache"
           >Kurssprache</label
@@ -263,7 +256,7 @@
           name="kurssprache"
           id="gemeinespracheKurssprache"
           value="Gemeinesprache"
-        /><label class="" name="kurssprache" id="gemeinespracheKurssprache"
+        /><label class="" name="kurssprache" id="kursspracheGemeinesprache"
           >Gemeinesprache</label
         >
         <input
@@ -272,14 +265,15 @@
           name="kurssprache"
           id="menschKurssprache"
           value="Mensch"
-        /><label class="" name="kurssprache" id="menschKurssprache"
+          onclick="mensch()"
+        /><label class="" name="kurssprache" id="KursspracheMensch"
           >Mensch</label
         >
         <input
           type="checkbox"
           class=""
           name="kurssprache"
-          id="menschKurssprache"
+          id="halblingKurssprache"
           value="Halbling"
         /><label class="" name="kurssprache" id="halblingKurssprache"
           >Halbling</label
@@ -307,7 +301,7 @@
           class=""
           name="kurssprache"
           id="gnomischKurssprache"
-          value="Riesisch"
+          value="Gnomisch"
         /><label class="" name="kurssprache" id="gnomischKurssprache"
           >Gnomisch</label
         >
@@ -361,7 +355,7 @@
         <label class="" name="kurssprache" id="kursspracheAbstand"
           >&nbsp;&nbsp;&nbsp;</label
         ><label class="" name="kurssprache" id="kursspracheFehlemeldung"
-          >Fehlemeldung</label
+          >&nbsp</label
         ><br />
         <label class="" name="uebersetzt" id="titelUebersetzt"
           >Übersetzt in</label
@@ -370,9 +364,9 @@
           type="radio"
           class=""
           name="uebersetzt"
-          id=""
+          id="uebersetztDeutsch"
           value="Deutsch"
-        /><label class="" name="uebersetztDeutsch" id="Deutsch">Deutsch</label>
+        /><label class="" name="uebersetzt" id="Deutsch">Deutsch</label>
         <input
           type="radio"
           class=""
@@ -386,19 +380,19 @@
           name="uebersetzt"
           id="uebersetztEnglisch"
           value="Englisch"
-        /><label class="" name="uebersetzt" id="uebersetztEnglisch"
+        /><label class="" name="uebersetzt" id="Englisch"
           >Englisch</label
         >
         <label class="" name="uebersetzt" id="uebersetztAbstand"
           >&nbsp;&nbsp;&nbsp;</label
         ><label class="" name="uebersetzt" id="uebersetztFehlemeldung"
-          >Fehlemeldung</label
+          >&nbsp</label
         ><br /><br />
         <h6 class="" id="titelRechtliches">Rechtliches</h6>
         <input type="checkbox" class="" name="agb" id="agb" value="agb" /><label
           >Ich habe die agbs Gelesen und akzeptiert</label
         ><label class="" name="agb" id="agbAbstand">&nbsp;&nbsp;&nbsp;</label
-        ><label class="" name="agb" id="agbFehlemeldung">Fehlemeldung</label
+        ><label class="" name="agb" id="agbFehlemeldung">&nbsp</label
         ><br />
         <label class="" name="versicherung" id="titelAnnullierungsversicherung">Annullierungsversicherung</label><br />
         <input type="radio"
@@ -416,7 +410,7 @@
         id="versicherungAbstand">&nbsp;&nbsp;&nbsp;</label>
         <label class=""
         name="versicherung"
-        id="versicherungFehlemeldung">Fehlemeldung</label
+        id="versicherungFehlemeldung">&nbsp</label
         ><br /><br />
         <input type="submit"
         class=""
@@ -424,7 +418,6 @@
         id="submit"
         value="submit" />
       </form>
-      <button type="button" class="btn btn-light" onclick="validateKursort()">Test</button>
     </section>
     <footer></footer>
   </body>
