@@ -3,12 +3,22 @@ let intervalUhr;
 let intervalId;
 let d = new Date();
 
+let dunkel;
+
 /* funktionen für alle */
 
 function workInProgress() {
   alert("work in progress");
 }
 function dark() {
+
+  /* if (false == localStorage.getItem("dunkel")) {
+    alert('es wird dunkel');
+    localStorage.setItem("dunkel", false);
+  } else {
+    alert('es wird Hell');
+    localStorage.setItem("dunkel", true);
+  } */
   document.body.classList.toggle("dark-mode");
 
   let buttons = document.querySelectorAll(".btn-light");
@@ -22,6 +32,13 @@ function updateUhr() {
   document.getElementById("minutenUhr").innerText = d.getMinutes();
 }
 function uhr() {
+  /* dunkel = localStorage.getItem("dunkel");
+  if (!dunkel) {
+    dark();
+  } else {
+    localStorage.setItem("dunkel", false);
+  } */
+
   intervalUhr = setInterval(updateUhr(), 1000);
 }
 
@@ -212,10 +229,13 @@ function validatePlz() {
 
   if (!value) {
     document.getElementById("plzFehlemeldung").innerText = "Bitte Ausfüllen";
+    jump("plzFehlemeldung");
     return false;
   } else if (value < 9000 || value > 1000) {
     document.getElementById("plzFehlemeldung").innerText =
       "PLZ Existiert nicht.";
+    jump("plzFehlemeldung");
+    return false;
   } else {
     document.getElementById("plzFehlemeldung").innerText = value;
     return true;
@@ -226,6 +246,7 @@ function validateOrt() {
   let value = inputElement.value;
   if (!value) {
     document.getElementById("ortFehlemeldung").innerText = "Bitte Ausfüllen";
+    jump("ortFehlemeldung");
     return false;
   } else if (
     !sonderzeichenDont(
@@ -236,11 +257,12 @@ function validateOrt() {
       "ortFehlemeldung"
     )
   ) {
+    jump("ortFehlemeldung");
     return false;
   } else {
     document.getElementById("ortFehlemeldung").innerText =
       "du hast " + value + " ausgefult";
-    return false;
+    return true;
   }
 }
 function validateEmail() {
@@ -248,6 +270,8 @@ function validateEmail() {
   let value = inputElement.value;
   if (!value) {
     document.getElementById("eMailFehlemeldung").innerText = "Bitte Ausfüllen";
+    jump("eMailFehlemeldung");
+    return false;
   } else if (
     !sonderzeichenDont(
       12,
@@ -257,8 +281,10 @@ function validateEmail() {
       "eMailFehlemeldung"
     )
   ) {
+    jump("eMailFehlemeldung");
     return false;
   } else if (!sonderzeichenDo(0, 2, value, "muss ein (", "eMailFehlemeldung")) {
+    jump("eMailFehlemeldung");
     return false;
   } else {
     document.getElementById("eMailFehlemeldung").innerText =
@@ -271,6 +297,7 @@ function validateTelM() {
   let value = inputElement.value;
   if (!value) {
     document.getElementById("telMFehlemeldung").innerText = "Bitte ausfüllen";
+    jump("telMFehlemeldung");
     return false;
   }
   document.getElementById("telMFehlemeldung").innerText =
@@ -282,6 +309,7 @@ function validateTelP() {
   let value = inputElement.value;
   if (!value) {
     document.getElementById("telPFehlemeldung").innerText = "Bitte ausfüllen";
+    jump("telPFehlemeldung");
     return false;
   }
   document.getElementById("telPFehlemeldung").innerText =
@@ -302,6 +330,7 @@ function validateKursort() {
   ) {
     document.getElementById("kursortFehlemeldung").innerText =
       "Bitte Ausfüllen";
+    jump("kursortFehlemeldung");
     return false;
   } else {
     let radioButtons = document.getElementsByName("kursort");
