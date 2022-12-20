@@ -175,14 +175,19 @@ function validateStrasse() {
   if (!value) {
     document.getElementById("strasseFehlemeldung").innerText =
       "Bitte Ausfüllen";
+    jump("strasseFehlemeldung");
     return false;
   } else if (
     !sonderzeichenDont(0, 1, value, "darf kein (", "strasseFehlemeldung")
   ) {
     return false;
   } else if (
+    /* funktioniert noch nicht so wie ich es gerne hätte wollte es zusammen
+    fassen per for schleife aber bei einer oder bedingung hab ich es nicht
+    raus gefunden*/
     !sonderzeichenDo(2, 12, value, "muss ein (", "strasseFehlemeldung")
   ) {
+    jump("strasseFehlemeldung");
     return false;
   } else if (
     !sonderzeichenDont(
@@ -193,6 +198,7 @@ function validateStrasse() {
       "strasseFehlemeldung"
     )
   ) {
+    jump("strasseFehlemeldung");
     return false;
   } else {
     document.getElementById("strasseFehlemeldung").innerText =
@@ -462,6 +468,7 @@ function jump(etikette) {
   history.replaceState(null, null, url);
 }
 /* Diealeckte */
+// noch mal anschauen mit Chriss
 function mensch() {
   let mensch = document.getElementById("menschKurssprache");
   if (!mensch.checket) {
