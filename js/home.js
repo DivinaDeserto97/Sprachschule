@@ -11,14 +11,11 @@ function workInProgress() {
   alert("work in progress");
 }
 function dark() {
-
-  /* if (false == localStorage.getItem("dunkel")) {
-    alert('es wird dunkel');
+  if ('true' === localStorage.getItem("dunkel")) {
     localStorage.setItem("dunkel", false);
   } else {
-    alert('es wird Hell');
     localStorage.setItem("dunkel", true);
-  } */
+  }
   document.body.classList.toggle("dark-mode");
 
   let buttons = document.querySelectorAll(".btn-light");
@@ -32,12 +29,18 @@ function updateUhr() {
   document.getElementById("minutenUhr").innerText = d.getMinutes();
 }
 function uhr() {
-  /* dunkel = localStorage.getItem("dunkel");
-  if (!dunkel) {
-    dark();
+  dunkel = localStorage.getItem("dunkel");
+  if ('true' === localStorage.getItem("dunkel")) {
+    document.body.classList.toggle("dark-mode");
+
+    let buttons = document.querySelectorAll(".btn-light");
+
+    for (let b = 0; b < buttons.length; b++) {
+      buttons[b].classList.toggle("btn-dark");
+    }
   } else {
     localStorage.setItem("dunkel", false);
-  } */
+  }
 
   intervalUhr = setInterval(updateUhr(), 1000);
 }
