@@ -5,7 +5,7 @@
     --color-light: rgb(0, 0, 255);
     /* dark */
     --bg-body-dark: rgb(0, 0, 0);
-    --color-dark: rgb(255, 0, 0);
+    --color-dark: rgb(255, 255, 0);
   }
 /* elemente */
 body {
@@ -70,7 +70,7 @@ li a:hover {
 
     .dropdown:hover .dropdown-menu {
         display: block;
-        margin-top: 0; // remove the gap so it doesn't close
+        margin-top: 0; /* remove the gap so it doesn't close */
     }
 
 /* id */

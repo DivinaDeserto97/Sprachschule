@@ -11,7 +11,7 @@ function workInProgress() {
   alert("work in progress");
 }
 function dark() {
-  if ('true' === localStorage.getItem("dunkel")) {
+  if ("true" === localStorage.getItem("dunkel")) {
     localStorage.setItem("dunkel", false);
   } else {
     localStorage.setItem("dunkel", true);
@@ -30,7 +30,7 @@ function updateUhr() {
 }
 function uhr() {
   dunkel = localStorage.getItem("dunkel");
-  if ('true' === localStorage.getItem("dunkel")) {
+  if ("true" === localStorage.getItem("dunkel")) {
     document.body.classList.toggle("dark-mode");
 
     let buttons = document.querySelectorAll(".btn-light");
@@ -83,8 +83,8 @@ function validate() {
   if (!validateKursort()) return false;
   if (!validateKurssprache()) return false;
   if (!validateUebersetzung()) return false;
-  if (!validateAgb()) return false;
   if (!validateAnnulirung()) return false;
+  if (!validateAgb()) return false;
 
   return true;
 }
@@ -117,6 +117,7 @@ function validateAnrede() {
     }
     document.getElementById("anredeFehlemeldung").innerText =
       "Du hast " + value + " gewält.";
+    localStorage.setItem("Anrede", value);
     return true;
   }
 }
@@ -142,6 +143,7 @@ function validateVorname() {
   } else {
     document.getElementById("vornameFehlemeldung").innerText =
       "du hast " + value + " ausgefult";
+    localStorage.setItem("Vorname", value);
     return true;
   }
 }
@@ -167,6 +169,7 @@ function validateNachname() {
   } else {
     document.getElementById("nachnameFehlemeldung").innerText =
       "du hast " + value + " ausgefult";
+    localStorage.setItem("Nachname", value);
     return true;
   }
 }
@@ -186,6 +189,7 @@ function validateAge() {
   } else {
     document.getElementById("geburtsdatumFehlemeldung").innerText =
       "So alt bist du:" + value;
+    localStorage.setItem("Age", value);
     return true;
   }
 }
@@ -223,7 +227,8 @@ function validateStrasse() {
   } else {
     document.getElementById("strasseFehlemeldung").innerText =
       "du hast " + value + " ausgefult";
-    return false;
+    localStorage.setItem("Strasse", value);
+    return true;
   }
 }
 function validatePlz() {
@@ -234,13 +239,14 @@ function validatePlz() {
     document.getElementById("plzFehlemeldung").innerText = "Bitte Ausfüllen";
     jump("plzFehlemeldung");
     return false;
-  } else if (value < 9000 || value > 1000) {
+  } else if (value < 1000 || value > 9000) {
     document.getElementById("plzFehlemeldung").innerText =
       "PLZ Existiert nicht.";
     jump("plzFehlemeldung");
     return false;
   } else {
     document.getElementById("plzFehlemeldung").innerText = value;
+    localStorage.setItem("PLZ", value);
     return true;
   }
 }
@@ -265,6 +271,7 @@ function validateOrt() {
   } else {
     document.getElementById("ortFehlemeldung").innerText =
       "du hast " + value + " ausgefult";
+    localStorage.setItem("Ort", value);
     return true;
   }
 }
@@ -292,6 +299,7 @@ function validateEmail() {
   } else {
     document.getElementById("eMailFehlemeldung").innerText =
       "du hast " + value + " ausgefult";
+    localStorage.setItem("Email", value);
     return true;
   }
 }
@@ -305,6 +313,8 @@ function validateTelM() {
   }
   document.getElementById("telMFehlemeldung").innerText =
     "du hast " + value + " ausgefult";
+  localStorage.setItem("TelM", value);
+
   return true;
 }
 function validateTelP() {
@@ -317,6 +327,7 @@ function validateTelP() {
   }
   document.getElementById("telPFehlemeldung").innerText =
     "du hast " + value + " ausgefult";
+  localStorage.setItem("TelP", value);
   return true;
 }
 function validateKursort() {
@@ -344,6 +355,7 @@ function validateKursort() {
 
       if (button.checked) {
         value = button.value;
+        localStorage.setItem("Kursort", value);
         break;
       }
     }
@@ -396,8 +408,9 @@ function validateKurssprache() {
 
       if (button.checked) {
         value = button.value;
-        document.getElementById("kursspracheFehlemeldung").innerText =
-          "Du hast " + value + " gewält.";
+
+        Kurssprache = "Kurssprache" + b;
+        localStorage.setItem(Kurssprache, value);
       }
     }
     return true;
@@ -432,6 +445,7 @@ function validateUebersetzung() {
     }
     document.getElementById("uebersetztFehlemeldung").innerText =
       "Du hast " + value + " gewält.";
+    localStorage.setItem("Uebersetzung", value);
     return true;
   }
 }
@@ -468,6 +482,7 @@ function validateAnnulirung() {
     }
     document.getElementById("versicherungFehlemeldung").innerText =
       "Du hast " + value + " gewält.";
+    localStorage.setItem("Annulirung", value);
     return true;
   }
 }
@@ -500,7 +515,7 @@ function jump(etikette) {
   history.replaceState(null, null, url);
 }
 /* Diealeckte */
-// noch mal anschauen mit Chriss
+// noch mal anschauen mit Chriss / Brandon
 function mensch() {
   let mensch = document.getElementById("menschKurssprache");
   if (!mensch.checket) {
@@ -513,3 +528,57 @@ function mensch() {
   }
 }
 /* funktionen für Rüchkgabe page */
+function writeConfirmation() {
+  let Fname = localStorage.getItem("Anrede");
+  let Name = localStorage.getItem("Vorname");
+  let Alter = localStorage.getItem("Nachname");
+  let Strasse = localStorage.getItem("Age");
+  let plz = localStorage.getItem("Strasse");
+  let ort = localStorage.getItem("PLZ");
+  let eMail = localStorage.getItem("Ort");
+  let telM = localStorage.getItem("Email");
+  let telP = localStorage.getItem("TelM");
+  let Kursort = localStorage.getItem("TelP");
+  let Kurssprache1 = localStorage.getItem("Kursort");
+  let Kurssprache2 = localStorage.getItem("Kurssprache1");
+  let Kurssprache3 = localStorage.getItem("Kurssprache3");
+  let Kurssprache4 = localStorage.getItem("Kurssprache5");
+  let Kurssprache5 = localStorage.getItem("Kurssprache7");
+  let Kurssprache6 = localStorage.getItem("Kurssprache9");
+  let Kurssprache7 = localStorage.getItem("Kurssprache11");
+  let Kurssprache8 = localStorage.getItem("Kurssprache13");
+  let Kurssprache9 = localStorage.getItem("Kurssprache15");
+  let Kurssprache10 = localStorage.getItem("Kurssprache17");
+  let Kurssprache11 = localStorage.getItem("Kurssprache19");
+  let Kurssprache12 = localStorage.getItem("Kurssprache21");
+  let Uebersetzt = localStorage.getItem("Uebersetzung");
+  let Annullierungsversicherung = localStorage.getItem("Annulirung");
+
+  document.getElementById(
+    "Annullierungsversicherung"
+  ).innerHTML = `<h1>Wilkommen $Name</h1>
+<p>
+<span>$Anrede</span><span>$Fname</span><br>
+<span>Alter:</span><span>$Alter</span><br>
+<span>Strasse</span><span>$Strasse</span><br>
+<span>$plz</span><span>$ort</span><br>
+<span>E-Meil:</span><span>$eMail</span><br>
+<span>Tel. M.:</span><span>$telM</span><br>
+<span>Tel.:</span><span>$telP</span><br>
+<span>Kursort:</span><span>$Kursort</span><br>
+<span>Übersetzt in:</span><span>$Uebersetzt</span><br>
+<span>du hast folgende sprachen ausgewält:</span><br>
+<span>$Kurssprache1</span><span>$Kurssprache2</span><span>$Kurssprache3</span><span>$Kurssprache4</span><span>$Kurssprache5</span><span>$Kurssprache6</span><span>$Kurssprache7</span><span>$Kurssprache8</span><span>$Kurssprache9</span><span>$Kurssprache10</span><span>$Kurssprache11</span><span>$Kurssprache12</span><br><br>
+<span id="Annullierungsversicherung"></span>
+</p><script>blabla()</script>`;
+}
+function blabla() {
+  let Annullierungsversicherung = localStorage.getItem("Annulirung");
+  if (Annullierungsversicherung === "Ja") {
+    document.getElementById("Annullierungsversicherung").innerText =
+      "so ne geld verschwendung du bekomms ehnichts";
+  } else {
+    document.getElementById("Annullierungsversicherung").innerText =
+      "Danke für die Spende!";
+  }
+}
