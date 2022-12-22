@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>home</title>
+    <title>Danke</title>
 
     <!-- css -->
     <link href="/css/home.css" rel="stylesheet" />
@@ -25,13 +25,14 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body class="container" onload="uhr()">
+  <body class="container">
     <header class="row">
-      <div class="col-1">
+      <div id="steuerButton" class="col">
         <div class="row">
           <button
+            id="darklight"
             type="button"
-            class="col-6 btn btn-light d-flex"
+            class="col btn btn-light d-flex"
             onclick="dark()"
           >
             <svg
@@ -47,7 +48,7 @@
               />
             </svg>
           </button>
-          <span class="col-6 dropdown">
+          <div class="col dropdown">
             <button
               class="d-flex btn btn-light dropdown"
               type="button"
@@ -82,16 +83,16 @@
                 <a class="dropdown-item" href="#">News</a>
               </li>
             </ul>
-          </span>
+          </div>
         </div>
-      </div>
-      <span class="col-3"> Fantasy Languitch </span>
-      <div id="uhr" onclick="">
+       </div>
+       <div class="col"> Fantasy Languitch </div>
+       <div id="uhr" class="col">
         <span id="stundenUhr" class="col-1">h</span>
         <span id="trennerUhr" class="col-1">:</span>
         <span id="minutenUhr" class="col-1">m</span>
-      </div>
-      <div>
+       </div>
+       <div class="col">
         <input type="search" />
         <button type="button" class="btn btn-light" onclick="workInProgress()">
           <svg
@@ -107,9 +108,9 @@
             />
           </svg>
         </button>
-      </div>
+       </div>
+       <script>uhr();</script>
     </header>
-
     <section>
       <div id="eingebe"></div>
       <script>writeConfirmation()</script>

@@ -6,7 +6,12 @@ let d = new Date();
 let dunkel;
 
 /* funktionen für alle */
-
+function writeHaeder(){
+ document.getElementById('header').innerHTML = ``;
+}
+function writeFooter(){
+  document.getElementById('footer').innerHTML = ``;
+}
 function workInProgress() {
   alert("work in progress");
 }
