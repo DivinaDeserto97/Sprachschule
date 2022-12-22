@@ -567,7 +567,6 @@ function writeConfirmation() {
   let Kurssprache12 = localStorage.getItem("Kurssprache21");
   let Uebersetzt = localStorage.getItem("Uebersetzung");
   let Annullierungsversicherung = localStorage.getItem("Annulirung");
- alert(Fname);
   document.getElementById(
     "eingebe"
   ).innerHTML = `<h1>Wilkommen ${Name}</h1>
