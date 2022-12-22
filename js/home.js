@@ -6,12 +6,12 @@ let d = new Date();
 let dunkel;
 
 /* funktionen für alle */
-function writeHaeder(){
+/* function writeHaeder(){
  document.getElementById('header').innerHTML = ``;
 }
 function writeFooter(){
   document.getElementById('footer').innerHTML = ``;
-}
+} */
 function workInProgress() {
   alert("work in progress");
 }
@@ -531,14 +531,14 @@ function jump(etikette) {
 // noch mal anschauen mit Chriss / Brandon
 function mensch() {
   let mensch = document.getElementById("menschKurssprache");
-  if (!mensch.checket) {
-    alert("Mensch schaltet ein");
+
+  if (mensch.checked) {
     gemeinesprache = document.getElementById("gemeinespracheKurssprache");
-    if (!Gemeinesprache.checked) {
-      alert("gemeinesprache ist aus");
-      Gemeinesprache = true;
+    if (!gemeinesprache.checked) {
+      gemeinesprache.checked = true;
     }
   }
+
 }
 /* funktionen für Rüchkgabe page */
 function writeConfirmation() {

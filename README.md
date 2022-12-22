@@ -27,5 +27,14 @@ JavaScript-Feedback-Generierung (String-Verkettung, String-Vorlagen, DOM-Manipul
 <!-- Leistungen
 - GitHub-Link zum Site-Repository in simplonline.co - README.md im GitHub-Repository - RETROSPECTIVE.md im GitHub-Repository - Link zum Figma-Mockup (oder Wireframe) in README.md im GitHub-Repository -->
 
+
 # Funktionbeschreib
 
+<!--  
+Dark light button$
+Die Uhr funktioniert
+Im formular wält der button "Mensch" automatisch "Gemeine Sprach auch aus"
+-->
+
+# links
+<!-- https://miro.com/app/board/uXjVP5HcFWE=/-->
