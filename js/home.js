@@ -512,8 +512,7 @@ function sonderzeichenDo(start, stop, value, toDo, id) {
 function sonderzeichenDoOr(start, stop, value, toDo, id) {
   console.log("sonderzeichenDo");
   for (let z = start; z < stop; ++z) {
-    if (value.indexOf(zeichensatz[z]) === -1) {
-      
+    if (value.indexOf(zeichensatz[z]) >= 0) {
       return true;
     }
   }
@@ -543,8 +542,9 @@ function mensch() {
 }
 /* funktionen für Rüchkgabe page */
 function writeConfirmation() {
-  let Fname = localStorage.getItem("Anrede");
-  let Name = localStorage.getItem("Vorname");
+  let Anrede = localStorage.getItem("Anrede");
+  let Fname = localStorage.getItem("Vorname");
+  let Name = localStorage.getItem("Nachname");
   let Alter = localStorage.getItem("Nachname");
   let Strasse = localStorage.getItem("Age");
   let plz = localStorage.getItem("Strasse");
@@ -567,22 +567,22 @@ function writeConfirmation() {
   let Kurssprache12 = localStorage.getItem("Kurssprache21");
   let Uebersetzt = localStorage.getItem("Uebersetzung");
   let Annullierungsversicherung = localStorage.getItem("Annulirung");
-
+ alert(Fname);
   document.getElementById(
-    "Annullierungsversicherung"
-  ).innerHTML = `<h1>Wilkommen $Name</h1>
+    "eingebe"
+  ).innerHTML = `<h1>Wilkommen ${Name}</h1>
 <p>
-<span>$Anrede</span><span>$Fname</span><br>
-<span>Alter:</span><span>$Alter</span><br>
-<span>Strasse</span><span>$Strasse</span><br>
-<span>$plz</span><span>$ort</span><br>
-<span>E-Meil:</span><span>$eMail</span><br>
-<span>Tel. M.:</span><span>$telM</span><br>
-<span>Tel.:</span><span>$telP</span><br>
-<span>Kursort:</span><span>$Kursort</span><br>
-<span>Übersetzt in:</span><span>$Uebersetzt</span><br>
+<span>${Anrede}</span><span>${Fname}</span><br>
+<span>Alter:</span><span>${Alter}</span><br>
+<span>Adresse:</span><span>${Strasse}</span><br>
+<span>${plz}</span><span>${ort}</span><br>
+<span>E-Meil:</span><span>${eMail}</span><br>
+<span>Tel. M.:</span><span>${telM}</span><br>
+<span>Tel.:</span><span>${telP}</span><br>
+<span>Kursort:</span><span>${Kursort}</span><br>
+<span>Übersetzt in:</span><span>${Uebersetzt}</span><br>
 <span>du hast folgende sprachen ausgewält:</span><br>
-<span>$Kurssprache1</span><span>$Kurssprache2</span><span>$Kurssprache3</span><span>$Kurssprache4</span><span>$Kurssprache5</span><span>$Kurssprache6</span><span>$Kurssprache7</span><span>$Kurssprache8</span><span>$Kurssprache9</span><span>$Kurssprache10</span><span>$Kurssprache11</span><span>$Kurssprache12</span><br><br>
+<span>${Kurssprache1}</span><span>${Kurssprache2}</span><span>${Kurssprache3}</span><span>${Kurssprache4}</span><span>${Kurssprache5}</span><span>${Kurssprache6}</span><span>${Kurssprache7}</span><span>${Kurssprache8}</span><span>${Kurssprache9}</span><span>${Kurssprache10}</span><span>${Kurssprache11}</span><span>${Kurssprache12}</span><br><br>
 <span id="Annullierungsversicherung"></span>
 </p><script>blabla()</script>`;
 }
@@ -593,6 +593,6 @@ function blabla() {
       "so ne geld verschwendung du bekomms ehnichts";
   } else {
     document.getElementById("Annullierungsversicherung").innerText =
-      "Danke für die Spende!";
+      "Ich will aber nee Spende!";
   }
 }
