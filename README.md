@@ -34,7 +34,15 @@ JavaScript-Feedback-Generierung (String-Verkettung, String-Vorlagen, DOM-Manipul
 Dark light button$
 Die Uhr funktioniert
 Im formular wält der button "Mensch" automatisch "Gemeine Sprach auch aus"
+
+to do als verbesserung
+bei den anzeige die null anzeigen abfangen und ein ler string übergeben;
 -->
 
+# Repo
+
+<!-- habe das bootsrap & styiling ein bischen vernachläsigt und deshalb is mir die zeit abgelaufen. -->
+
 # links
-<!-- https://miro.com/app/board/uXjVP5HcFWE=/-->
+<!-- miror link -->
+<!-- https://miro.com/app/board/uXjVP5HcFWE=/?share_link_id=270503230174 -->
