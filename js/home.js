@@ -211,10 +211,7 @@ function validateStrasse() {
   ) {
     return false;
   } else if (
-    /* funktioniert noch nicht so wie ich es gerne hätte wollte es zusammen
-    fassen per for schleife aber bei einer oder bedingung hab ich es nicht
-    raus gefunden*/
-    !sonderzeichenDo(2, 12, value, "muss ein (", "strasseFehlemeldung")
+    !sonderzeichenDoOr(2, 12, value, "muss ein (", "strasseFehlemeldung")
   ) {
     jump("strasseFehlemeldung");
     return false;
@@ -511,6 +508,18 @@ function sonderzeichenDo(start, stop, value, toDo, id) {
     }
   }
   return true;
+}
+function sonderzeichenDoOr(start, stop, value, toDo, id) {
+  console.log("sonderzeichenDo");
+  for (let z = start; z < stop; ++z) {
+    if (value.indexOf(zeichensatz[z]) === -1) {
+      
+      return true;
+    }
+  }
+  document.getElementById(id).innerText =
+        "Es " + toDo + "eine zahl" + ") enthalten!";
+  return false;
 }
 
 /* Sprünge */
