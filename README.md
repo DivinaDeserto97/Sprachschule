@@ -44,5 +44,9 @@ bei den anzeige die null anzeigen abfangen und ein ler string übergeben;
 <!-- habe das bootsrap & styiling ein bischen vernachläsigt und deshalb is mir die zeit abgelaufen. -->
 
 # links
-<!-- miror link -->
-<!-- https://miro.com/app/board/uXjVP5HcFWE=/?share_link_id=270503230174 -->
+miror link
+https://miro.com/app/board/uXjVP5HcFWE=/?share_link_id=270503230174
+github
+https://github.com/DivinaDeserto97/Sprachschule
+git hub read me
+https://github.com/DivinaDeserto97/Sprachschule/blob/Dev/README.md#links
