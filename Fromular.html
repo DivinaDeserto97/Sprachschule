@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formular</title>
+
+    <!-- css -->
+    <link href="/css/home.css" rel="stylesheet" />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+
+    <!-- js -->
+    <script src="/js/home.js"></script>
+    <!-- Bootstrap -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body class="container light-mode">
+    <header id="header" class="row">
+      <div id="steuerButton" class="col">
+        <div class="row">
+          <button
+            id="darklight"
+            type="button"
+            class="col btn btn-light d-flex"
+            onclick="dark()"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="bi bi-lightbulb-fill"
+              viewBox="0 0 16 16"
+            >
+              <path
+                d="M2 6a6 6 0 1 1 10.174 4.31c-.203.196-.359.4-.453.619l-.762 1.769A.5.5 0 0 1 10.5 13h-5a.5.5 0 0 1-.46-.302l-.761-1.77a1.964 1.964 0 0 0-.453-.618A5.984 5.984 0 0 1 2 6zm3 8.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1l-.224.447a1 1 0 0 1-.894.553H6.618a1 1 0 0 1-.894-.553L5.5 15a.5.5 0 0 1-.5-.5z"
+              />
+            </svg>
+          </button>
+          <div class="col dropdown">
+            <button
+              class="d-flex btn btn-light dropdown"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                fill="currentColor"
+                class="bi bi-list"
+                viewBox="0 0 16 16"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+                />
+              </svg>
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="home.html">Home</a>
+              </li>
+              <li onclick="workInProgress()">
+                <a class="dropdown-item" href="#">about us</a>
+              </li>
+              <li onclick="workInProgress()">
+                <a class="dropdown-item" href="#">contact</a>
+              </li>
+              <li onclick="workInProgress()">
+                <a class="dropdown-item" href="#">News</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+       </div>
+       <div class="col"> Fantasy Languitch </div>
+       <div id="uhr" class="col">
+        <span id="stundenUhr" class="col-1">h</span>
+        <span id="trennerUhr" class="col-1">:</span>
+        <span id="minutenUhr" class="col-1">m</span>
+       </div>
+       <div class="col">
+        <input type="search" />
+        <button type="button" class="btn btn-light" onclick="workInProgress()">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="16"
+            height="16"
+            fill="currentColor"
+            class="bi bi-search"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"
+            />
+          </svg>
+        </button>
+       </div>
+       <script>uhr();</script>
+    </header>
+    <section>
+      <h6 class="nj" id="titelKontakt">Kontakt angaben</h6>
+      <form id="formular" action="/Danke.html" name="formular" method="post" onsubmit="return validate()">
+        <label class="" name="anrede" id="titelAnrede">Anrede</label><br />
+        <input
+          type="radio"
+          class=""
+          name="anrede"
+          id="herrAnrede"
+          value="Herr"
+        /><label class="" name="anrede" id="anredeHerr">Herr</label>
+        <input
+          type="radio"
+          class=""
+          name="anrede"
+          id="frauAnrede"
+          value="Frau"
+        /><label class="" name="anrede" id="anredeFrau">Frau</label>
+        <input
+          type="radio"
+          class=""
+          name="anrede"
+          id="andereAnrede"
+          value="Andere"
+        /><label class="" name="anrede" id="anredeAndere">Andere</label
+        ><label class="" name="anrede" id="anredeAbstand"
+          >&nbsp;&nbsp;&nbsp;</label
+        ><label class="" name="anrede" id="anredeFehlemeldung" style="color: red;"
+          ><a href="#anredeFehlemeldung">&nbsp</a></label
+        ><br />
+        <label class="" name="vorname" id="titelVorname">Vorname</label><br />
+        <input
+          type="text"
+          class=""
+          name="vorname"
+          id="vorname"
+          value=""
+        /><label class="" name="vorname" id="vornameAbstand"
+          >&nbsp;&nbsp;&nbsp;</label
+        ><label class="" name="vorname" id="vornameFehlemeldung" style="color: red;"
+          ><a href="#vornameFehlemeldung">&nbsp</a></label
+        ><br />
+        <label class="" name="nachname" id="titelNachname">Nachname</label
+        ><br />
+        <input
+          type="text"
+          class=""
+          name="nachname"
+          id="nachname"
+          value=""
+        /><label class="" name="nachname" id="nachnameAbstand"
+          >&nbsp;&nbsp;&nbsp;</label
+        ><label class="" name="nachname" id="nachnameFehlemeldung" style="color: red;
+          ><a href="#nachnameFehlemeldung">&nbsp</a></label
+        ><br />
+        <label class="" name="geburtsdatum" id="titelGeburtsdatum"
+          >Alter</label
+        ><br />
+        <input
+          type="number"
+          class=""
+          name="geburtsdatum"
+          id="geburtsdatum"
+          value=""
+        /><label class="" name="geburtsdatum" id="geburtsdatumAbstand"
+          >&nbsp;&nbsp;&nbsp;</label
+        ><label class="" name="geburtsdatum" id="geburtsdatumFehlemeldung" style="color: red;"
+          ><a href="#geburtsdatumFehlemeldung">&nbsp</a></label
+        ><br />
+        <label class="" name="strasse" id="titelStrasse">Strasse</label><br />
+        <input
+          type="text"
+          class=""
+          name="strasse"
+          id="strasse"
+          value=""
+        /><label class="" name="strasse" id="strasseAbstand"
+          >&nbsp;&nbsp;&nbsp;</label
+        ><label class="" name="strasse" id="strasseFehlemeldung" style="color: red;
+          ><a href="#strasseFehlemeldung">&nbsp</a></label
+        ><br />
+        <label class="" name="plz" id="titelPlz">PLZ</label><br />
+        <input type="number" class="" name="plz" id="plz" value="0000" /><label
+          class=""
+          name="plz"
+          id="plzAbstand"
+          >&nbsp;&nbsp;&nbsp;</label
+        ><label class="" name="plz" id="plzFehlemeldung" style="color: red;><a href="#plzFehlemeldung">&nbsp</a></label
+        ><br />
+        <label class="" name="ort" id="titelOrt">Ort</label><br />
+        <input type="text" class="" name="ort" id="ort" value="" /><label
+          class=""
+          name="ort"
+          id="ortAbstand"
+          >&nbsp;&nbsp;&nbsp;</label
+        ><label class="" name="ort" id="ortFehlemeldung" style="color: red;"><a href="#ortFehlemeldung">&nbsp</a></label
+        ><br />
+        <label class="" name="eMail" id="titelEMail">E-Mail</label><br />
+        <input type="email" class="" name="eMail" id="eMail" value="" /><label
+          class=""
+          name="eMail"
+          id="eMailAbstand"
+          >&nbsp;&nbsp;&nbsp;</label
+        ><label class="" name="eMail" id="eMailFehlemeldung" style="color: red;"><a href="#eMailFehlemeldung">&nbsp</a></label
+        ><br />
+        <label class="" name="telM" id="titelTelM">Tel. M.:</label><br />
+        <input type="tel" class="" name="telM" id="telM" value="" /><label
+          class=""
+          name="telM"
+          id="telMAbstand"
+          >&nbsp;&nbsp;&nbsp;</label
+        ><label class="" name="telM" id="telMFehlemeldung"><a href="#telMFehlemeldung">&nbsp</a></label
+        ><br />
+        <label class="" name="telP" id="titelTelP">Tel. P.:</label><br />
+        <input type="tel" class="" name="telP" id="telP" value="" /><label
+          class=""
+          name="telP"
+          id="telPAbstand"
+          >&nbsp;&nbsp;&nbsp;</label
+        ><label class="" name="telP" id="telPFehlemeldung"><a href="#telPFehlemeldung">&nbsp</a></label
+        ><br /><br />
+        <h6 id="titelKurs">Kurs</h6>
+        <label class="" name="kursort" id="titelKursort">Kursort</label><br />
+        <input
+          type="radio"
+          class=""
+          name="kursort"
+          id="zürichKursort"
+          value="Zürich"
+        /><label class="" name="kursort" id="kursortZürich">Zürich</label>
+        <input
+          type="radio"
+          class=""
+          name="kursort"
+          id="parisKursort"
+          value="Paris"
+        /><label>Paris</label>
+        <input
+          type="radio"
+          class=""
+          name="kursort"
+          id="newYorkKursort"
+          value="New York"
+        /><label class="" name="kursort" id="kursortNewYork">New York</label
+        ><label class="" name="kursort" id="kursortAbstand"
+          >&nbsp;&nbsp;&nbsp;</label
+        ><label class="" name="kursort" id="kursortFehlemeldung"
+          ><a href="#kursortFehlemeldung">&nbsp</a></label
+        ><br />
+        <label class="" name="kurssprache" id="titelKurssprache"
+          >Kurssprache</label
+        ><br />
+        <input
+          type="checkbox"
+          class=""
+          name="kurssprache"
+          id="gemeinespracheKurssprache"
+          value="Gemeinesprache"
+        /><label class="" name="kurssprache" id="kursspracheGemeinesprache"
+          >Gemeinesprache</label
+        >
+        <input
+          type="checkbox"
+          class=""
+          name="kurssprache"
+          id="menschKurssprache"
+          value="Mensch"
+          onclick="mensch()"
+        /><label class="" name="kurssprache" id="KursspracheMensch"
+          >Mensch</label
+        >
+        <input
+          type="checkbox"
+          class=""
+          name="kurssprache"
+          id="halblingKurssprache"
+          value="Halbling"
+        /><label class="" name="kurssprache" id="halblingKurssprache"
+          >Halbling</label
+        ><br />
+        <input
+          type="checkbox"
+          class=""
+          name="kurssprache"
+          id="zwergischKurssprache"
+          value="Zwergisch"
+        /><label class="" name="kurssprache" id="zwergischKurssprache"
+          >Zwergisch</label
+        >
+        <input
+          type="checkbox"
+          class=""
+          name="kurssprache"
+          id="riesischKurssprache"
+          value="Riesisch"
+        /><label class="" name="kurssprache" id="riesischKurssprache"
+          >Riesisch</label
+        >
+        <input
+          type="checkbox"
+          class=""
+          name="kurssprache"
+          id="gnomischKurssprache"
+          value="Gnomisch"
+        /><label class="" name="kurssprache" id="gnomischKurssprache"
+          >Gnomisch</label
+        >
+        <input
+          type="checkbox"
+          class=""
+          name="kurssprache"
+          id="goblinischKurssprache"
+          value="Goblinisch"
+        /><label class="" name="kurssprache" id="goblinischKurssprache"
+          >Goblinisch</label
+        >
+        <input
+          type="checkbox"
+          class=""
+          name="kurssprache"
+          id="orksKurssprache"
+          value="Orks"
+        /><label class="" name="kurssprache" id="orksKurssprache">Orks</label
+        ><br />
+        <input
+          type="checkbox"
+          class=""
+          name="kurssprache"
+          id="elfischKurssprache"
+          value="Elfisch"
+        /><label class="" name="kurssprache" id="elfischKurssprache"
+          >Elfisch</label
+        >
+        <input
+          type="checkbox"
+          class=""
+          name="kurssprache"
+          id="sylvanischKurssprache"
+          value="sylvanisch"
+        /><label class="" name="kurssprache" id="sylvanischKurssprache"
+          >Sylvanisch</label
+        >
+        <input
+          type="checkbox"
+          class=""
+          name="kurssprache"
+          id="gemeinespracheDerUnterreicheKurssprache"
+          value="Gemeinesprache der unterreiche"
+        /><label
+          class=""
+          name="kurssprache"
+          id="gemeinespracheDerUnterreicheKurssprache"
+          >Gemeinesprache der unterreiche</label
+        >
+        <label class="" name="kurssprache" id="kursspracheAbstand"
+          >&nbsp;&nbsp;&nbsp;</label
+        ><label class="" name="kurssprache" id="kursspracheFehlemeldung"
+          >&nbsp</label
+        ><br />
+        <label class="" name="uebersetzt" id="titelUebersetzt"
+          >Übersetzt in</label
+        ><br />
+        <input
+          type="radio"
+          class=""
+          name="uebersetzt"
+          id="uebersetztDeutsch"
+          value="Deutsch"
+        /><label class="" name="uebersetzt" id="Deutsch">Deutsch</label>
+        <input
+          type="radio"
+          class=""
+          name="uebersetzt"
+          id="uebersetztFranzösich"
+          value="Französich"
+        /><label class="" name="uebersetzt" id="Französich">Französich</label
+        ><input
+          type="radio"
+          class=""
+          name="uebersetzt"
+          id="uebersetztEnglisch"
+          value="Englisch"
+        /><label class="" name="uebersetzt" id="Englisch"
+          >Englisch</label
+        >
+        <label class="" name="uebersetzt" id="uebersetztAbstand"
+          >&nbsp;&nbsp;&nbsp;</label
+        ><label class="" name="uebersetzt" id="uebersetztFehlemeldung"
+          >&nbsp</label
+        ><br /><br />
+        <h6 class="" id="titelRechtliches">Rechtliches</h6>
+        <input type="checkbox" class="" name="agb" id="agb" value="agb" /><label
+          >Ich habe die <a href="http://127.0.0.1:3000/AGB.html" target="_blank" >agbs</a> Gelesen und akzeptiert</label
+        ><label class="" name="agb" id="agbAbstand">&nbsp;&nbsp;&nbsp;</label
+        ><label class="" name="agb" id="agbFehlemeldung">&nbsp</label
+        ><br />
+        <label class="" name="versicherung" id="titelAnnullierungsversicherung">Annullierungsversicherung</label><br />
+        <input type="radio"
+        class=""
+        name="versicherung"
+        id="jaVersicherung"
+        value="Ja"/><label class="" name="versicherung" id="versicherungJa">Ja</label>
+        <input type="radio"
+        class=""
+        name="versicherung"
+        id="neinVersicherung"
+        value="Nein" /><label class="" name="versicherung" id="versicherungNein">Nein</label
+        ><label class=""
+        name="versicherung"
+        id="versicherungAbstand">&nbsp;&nbsp;&nbsp;</label>
+        <label class=""
+        name="versicherung"
+        id="versicherungFehlemeldung">&nbsp</label
+        ><br /><br />
+        <input type="submit"
+        class=""
+        name="submit"
+        id="submit"
+        value="submit" />
+      </form>
+    </section>
+    <footer></footer>
+  </body>
+  
+</html>
