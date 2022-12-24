@@ -518,7 +518,6 @@ function jump(etikette) {
   history.replaceState(null, null, url);
 }
 /* Diealeckte */
-// noch mal anschauen mit Chriss / Brandon
 function mensch() {
   let mensch = document.getElementById("menschKurssprache");
 
