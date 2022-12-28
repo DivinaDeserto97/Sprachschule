@@ -54,24 +54,14 @@ function uhr() {
 
 /* funktionen für Formular page */
 let zeichensatz = [
-  ".",
-  "@",
-  "0",
-  "1",
-  "2",
-  "3",
-  "4",
-  "5",
-  "6",
-  "7",
-  "8",
-  "9",
+  ".", "@", "0", "1", "2", "3", "4", "5", "6", "7", "8", "9",
   // ab da anfassen
-  "!",
-  "?",
-  "|",
-  " ",
-  "(",
+  "!", "?", ",", "&", "|", " ", "(", ")", "{", "}", "[", "]",
+  "*", "^", ":", ";", "ç", "§", "°", "~", "#", "¼", "½", "¬",
+  "¢", "´", "`", "\"","<", ">", "\\", "-", "-", "_", "$", "£",
+  "+", "-", "/", "ł", "€", "¶", "ŧ", "←", "↓", "→", "œ", "þ",
+  "è", "à", "¨", "æ", "ß", "ð", "đ", "ŋ", "ħ", "ˀ", "ĸ", "ł",
+  "«", "»", "¢", "“", "─", "·"
 ];
 
 function validate() {
@@ -528,7 +518,6 @@ function jump(etikette) {
   history.replaceState(null, null, url);
 }
 /* Diealeckte */
-// noch mal anschauen mit Chriss / Brandon
 function mensch() {
   let mensch = document.getElementById("menschKurssprache");
 
